@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import { FooterContainer } from './bundle/common/components/Footer';
 import { HeaderContainer } from './bundle/common/components/Header';
 import { BodyContainer } from './bundle/common/components/Body';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
-import routes from './bundle/orderflow/routes/orderflow';
 
 class Main extends React.PureComponent<any, any> {
     // componentDidMount() {}
@@ -15,20 +12,7 @@ class Main extends React.PureComponent<any, any> {
         return (
             <div>
                 <HeaderContainer />
-                <Router>
-                    <div>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/orderflow">Order</Link>
-                            </li>
-                        </ul>
-                        {routes}
-                        <Route exact path="/" component={BodyContainer} />
-                    </div>
-                </Router>
+                <BodyContainer />
                 <FooterContainer />
             </div>
         );
