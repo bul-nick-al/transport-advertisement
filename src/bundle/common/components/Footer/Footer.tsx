@@ -49,9 +49,7 @@ const PhoneNumber = styled.div`
 const Footer = () => (
     <Base>
         <Logo src={require('../../../../assets/logo/logo.svg')} alt={'logo'} />
-        <PhoneNumber>
-            {phoneNumber}
-        </PhoneNumber>
+        <PhoneNumber>{phoneNumber}</PhoneNumber>
         <Links>
             <Link href="url">Носители</Link>
             <Link href="url">Сервис</Link>
@@ -59,14 +57,38 @@ const Footer = () => (
         </Links>
         <Links>
             <SocialIcons>
-                <SocialIcon src={require('../../../../assets/social/vk.svg')} alt={'vk'} />
-                <SocialIcon src={require('../../../../assets/social/twitter.svg')} alt={'twitter'} />
-                <SocialIcon src={require('../../../../assets/social/youtube.svg')} alt={'youtube'} />
-                <SocialIcon src={require('../../../../assets/social/facebook.svg')} alt={'facebook'} />
-                <SocialIcon src={require('../../../../assets/social/google.svg')} alt={'google'} />
-                <SocialIcon src={require('../../../../assets/social/instagram.svg')} alt={'instagram'} />
-                <SocialIcon src={require('../../../../assets/social/linkedIn.svg')} alt={'linkedIn'} />
-                <SocialIcon src={require('../../../../assets/social/ok.svg')} alt={'ok'} />
+                <SocialIcon
+                    src={require('../../../../assets/social/vk.svg')}
+                    alt={'vk'}
+                />
+                <SocialIcon
+                    src={require('../../../../assets/social/twitter.svg')}
+                    alt={'twitter'}
+                />
+                <SocialIcon
+                    src={require('../../../../assets/social/youtube.svg')}
+                    alt={'youtube'}
+                />
+                <SocialIcon
+                    src={require('../../../../assets/social/facebook.svg')}
+                    alt={'facebook'}
+                />
+                <SocialIcon
+                    src={require('../../../../assets/social/google.svg')}
+                    alt={'google'}
+                />
+                <SocialIcon
+                    src={require('../../../../assets/social/instagram.svg')}
+                    alt={'instagram'}
+                />
+                <SocialIcon
+                    src={require('../../../../assets/social/linkedIn.svg')}
+                    alt={'linkedIn'}
+                />
+                <SocialIcon
+                    src={require('../../../../assets/social/ok.svg')}
+                    alt={'ok'}
+                />
             </SocialIcons>
         </Links>
     </Base>
