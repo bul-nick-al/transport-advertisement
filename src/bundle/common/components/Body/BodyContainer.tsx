@@ -24,6 +24,7 @@ class BodyContainer extends React.Component<any, any> {
                         </li>
                     </ul>
                     {routes}
+                    <Body />
                     <Route exact path="/" component={RegistrationContainer} />
                 </div>
             </Router>
