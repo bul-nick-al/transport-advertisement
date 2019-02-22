@@ -14,6 +14,7 @@ module.exports = {
         filename: '[name].js',
         path: path.resolve(__dirname, outputDirectory),
         libraryTarget: 'umd',
+        // publicPath: '/transport/',
         publicPath: '/',
     },
     node: {
@@ -63,8 +64,18 @@ module.exports = {
                 loader: 'awesome-typescript-loader',
             },
             {
-                test: /\.(jpe?g|gif|png|svg|woff|ttf|eot|wav|mp3)$/,
-                loader: 'file-loader',
+                test: /\.(jpe?g|gif|svg|png|woff|ttf|eot|wav|mp3)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            limit: 12000,
+                            name(file) {
+                                return 'public/[name].[ext]';
+                            },
+                        },
+                    },
+                ],
             },
         ],
     },

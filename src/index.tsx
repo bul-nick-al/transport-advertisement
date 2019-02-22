@@ -5,7 +5,16 @@ import { FooterContainer } from './bundle/common/components/Footer';
 import { HeaderContainer } from './bundle/common/components/Header';
 import { BodyContainer } from './bundle/common/components/Body';
 
-import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+  
+    @import url(‘https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+    color: green;
+    font-family: Roboto;
+  }
+`;
 
 class Main extends React.PureComponent<any, any> {
     // componentDidMount() {}
@@ -13,6 +22,7 @@ class Main extends React.PureComponent<any, any> {
     render() {
         return (
             <div>
+                <GlobalStyle />
                 <HeaderContainer />
                 <BodyContainer />
                 <FooterContainer />
