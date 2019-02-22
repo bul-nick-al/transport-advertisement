@@ -5,6 +5,8 @@ import { FooterContainer } from './bundle/common/components/Footer';
 import { HeaderContainer } from './bundle/common/components/Header';
 import { BodyContainer } from './bundle/common/components/Body';
 
+import styled from 'styled-components';
+
 class Main extends React.PureComponent<any, any> {
     // componentDidMount() {}
 

@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-export default class Header extends React.Component {
-    render() {
-        return <div>Footer</div>;
-    }
-}
+const Footer = ({ className }) => <div className={className}>Footer</div>;
+
+export default Footer;
