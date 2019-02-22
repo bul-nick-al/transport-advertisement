@@ -1,10 +1,8 @@
 import { connect } from 'react-redux';
 import * as React from 'react';
-import Body from './Body';
 
-import routes from '../../../orderflow/routes/orderflow';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { RegistrationContainer } from '../../../registration/components/Registration';
+import StepBar from '../StepBar';
+import { ChooseTilesContainer } from '../../../orderflow/components/ChooseTilesContainer';
 
 const mapStateToProps = state => ({});
 
@@ -13,21 +11,10 @@ const mapDispatchToProps = dispatch => ({});
 class BodyContainer extends React.Component<any, any> {
     render() {
         return (
-            <Router>
-                <div>
-                    <ul>
-                        <li>
-                            <Link to="/">Registration</Link>
-                        </li>
-                        <li>
-                            <Link to="/orderflow">Order</Link>
-                        </li>
-                    </ul>
-                    {routes}
-                    <Body />
-                    <Route exact path="/" component={RegistrationContainer} />
-                </div>
-            </Router>
+            <div>
+                <StepBar />
+                <ChooseTilesContainer />
+            </div>
         );
     }
 }
