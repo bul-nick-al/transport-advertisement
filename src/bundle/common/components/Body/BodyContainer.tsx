@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import * as React from 'react';
+import styled from 'styled-components';
 
 import StepBar from '../StepBar';
 import { ChooseTilesContainer } from '../../../orderflow/components/ChooseTilesContainer';
@@ -8,13 +9,17 @@ const mapStateToProps = state => ({});
 
 const mapDispatchToProps = dispatch => ({});
 
+const Body = styled.div`
+    height: 100%;
+`;
+
 class BodyContainer extends React.Component<any, any> {
     render() {
         return (
-            <div>
+            <Body>
                 <StepBar />
                 <ChooseTilesContainer />
-            </div>
+            </Body>
         );
     }
 }
