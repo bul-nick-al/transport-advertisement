@@ -12,10 +12,11 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, outputDirectory),
-        libraryTarget: 'umd'
+        publicPath: '/transport/',
+        libraryTarget: 'umd',
     },
     node: {
-        fs: 'empty'
+        fs: 'empty',
     },
     plugins: [
         new CleanWebpackPlugin([outputDirectory]),
@@ -23,14 +24,14 @@ module.exports = {
             Promise:
                 'imports-loader?this=>global!exports-loader?global.Promise!es6-promise',
             fetch:
-                'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch'
-        })
+                'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch',
+        }),
     ],
     //devtool: '#source-map',
     devtool: 'none',
     resolve: {
         modules: ['node_modules', 'src'],
-        extensions: ['.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.css']
+        extensions: ['.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.css'],
     },
 
     module: {
@@ -38,20 +39,29 @@ module.exports = {
             { parser: { system: false } },
             {
                 test: /\.tsx?$/,
-                loader: 'awesome-typescript-loader'
+                loader: 'awesome-typescript-loader',
             },
             {
                 test: /\.(jpe?g|gif|png|svg|woff|ttf|eot|wav|mp3)$/,
-                loader: 'file-loader'
-            }
-        ]
-
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            limit: 12000,
+                            name(file) {
+                                return 'public/[name].[ext]';
+                            },
+                        },
+                    },
+                ],
+            },
+        ],
     },
     externals: {
-        'react': 'react',
+        react: 'react',
         'react-dom': 'react-dom',
-        'redux': 'redux',
+        redux: 'redux',
         'react-redux': 'react-redux',
-        'styled-components': 'styled-components'
-    }
+        // 'styled-components': 'styled-components'
+    },
 };

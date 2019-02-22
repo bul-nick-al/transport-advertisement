@@ -1,4 +1,4 @@
-<svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="156" height="35" viewBox="0 0 156 35">
+<svg id="Instagram" xmlns="http://www.w3.org/2000/svg" width="16.969" height="16.844" viewBox="0 0 16.969 16.844">
   <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -30,24 +30,10 @@
 <defs>
     <style>
       .cls-1 {
-        font-size: 31.708px;
-      }
-
-      .cls-1, .cls-3 {
-        fill: #eff3f6;
-        font-family: "Proxima Nova";
-        font-weight: 600;
-      }
-
-      .cls-2 {
-        fill: #354052;
-      }
-
-      .cls-3 {
-        font-size: 15.854px;
+        fill: #fff;
+        fill-rule: evenodd;
       }
     </style>
   </defs>
-  <text id="MEDIA_PULT" data-name="MEDIA PULT" class="cls-1" transform="translate(-0.841 18.375) scale(0.841)">MEDIA<tspan class="cls-2"> PULT</tspan></text>
-  <text id="Агрегатор_оффлайн_рекламы" data-name="Агрегатор оффлайн рекламы" class="cls-3" transform="translate(1.453 32.328) scale(0.654 0.636)">Агрегатор оффлайн рекламы</text>
+  <path id="icon" class="cls-1" d="M724.859,607.04H712.128a2.114,2.114,0,0,0-2.121,2.105v12.634a2.115,2.115,0,0,0,2.121,2.106h12.731a2.115,2.115,0,0,0,2.122-2.106V609.145a2.115,2.115,0,0,0-2.122-2.105m-6.365,6.317a2.22,2.22,0,0,1,2.121,2.105,2.122,2.122,0,0,1-4.243,0,2.221,2.221,0,0,1,2.122-2.105m6.532,7.354a1.407,1.407,0,0,1-1.258,1.233H713.159a1.361,1.361,0,0,1-1.228-1.218v-5.264a1.377,1.377,0,0,1,1.258-1.2H714.4a5.355,5.355,0,0,0-.151,1.2,4.244,4.244,0,0,0,8.487,0,5.28,5.28,0,0,0-.151-1.188H723.8a1.318,1.318,0,0,1,1.228,1.173v5.264Zm-0.167-9.46A1.057,1.057,0,0,1,723.8,612.3h-1.061a1.057,1.057,0,0,1-1.061-1.053V610.2a1.057,1.057,0,0,1,1.061-1.053H723.8a1.057,1.057,0,0,1,1.061,1.053v1.053Z" transform="translate(-710 -607.031)"/>
 </svg>

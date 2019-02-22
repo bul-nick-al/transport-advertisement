@@ -3,7 +3,6 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const Base = styled.header`
-    position: fixed;
     left: 0;
     top: 0;
     width: 100%;

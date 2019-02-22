@@ -9,10 +9,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
-  
-    @import url(‘https://fonts.googleapis.com/css?family=Montserrat|Roboto');
-    color: green;
-    font-family: Roboto;
+    margin: 0px;
+    padding: 0px;
   }
 `;
 
