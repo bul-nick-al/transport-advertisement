@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import * as React from 'react';
+import Body from './Body';
 
 import routes from '../../../orderflow/routes/orderflow';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
