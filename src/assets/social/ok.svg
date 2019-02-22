@@ -1,4 +1,4 @@
-<svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="156" height="35" viewBox="0 0 156 35">
+<svg xmlns="http://www.w3.org/2000/svg" width="9.688" height="18.5" viewBox="0 0 9.688 18.5">
   <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -30,24 +30,10 @@
 <defs>
     <style>
       .cls-1 {
-        font-size: 31.708px;
-      }
-
-      .cls-1, .cls-3 {
-        fill: #eff3f6;
-        font-family: "Proxima Nova";
-        font-weight: 600;
-      }
-
-      .cls-2 {
-        fill: #354052;
-      }
-
-      .cls-3 {
-        font-size: 15.854px;
+        fill: #fff;
+        fill-rule: evenodd;
       }
     </style>
   </defs>
-  <text id="MEDIA_PULT" data-name="MEDIA PULT" class="cls-1" transform="translate(-0.841 18.375) scale(0.841)">MEDIA<tspan class="cls-2"> PULT</tspan></text>
-  <text id="Агрегатор_оффлайн_рекламы" data-name="Агрегатор оффлайн рекламы" class="cls-3" transform="translate(1.453 32.328) scale(0.654 0.636)">Агрегатор оффлайн рекламы</text>
+  <path id="Фигура_1" data-name="Фигура 1" class="cls-1" d="M855.15,608.034a1.987,1.987,0,1,1-1.789,1.977,1.893,1.893,0,0,1,1.789-1.977h0Zm0,6.751a4.8,4.8,0,1,0-4.321-4.774,4.57,4.57,0,0,0,4.321,4.774m1.749,3.9a7.678,7.678,0,0,0,2.509-1.149,1.487,1.487,0,0,0,.4-1.929,1.2,1.2,0,0,0-1.744-.441l0,0a5.05,5.05,0,0,1-5.818,0,1.2,1.2,0,0,0-1.744.437v0a1.487,1.487,0,0,0,.4,1.929,7.678,7.678,0,0,0,2.509,1.149l-2.416,2.67a1.505,1.505,0,0,0,0,1.979,1.182,1.182,0,0,0,1.79,0l2.374-2.624,2.375,2.624a1.181,1.181,0,0,0,1.788,0s0,0,0,0a1.5,1.5,0,0,0,0-1.975l0,0-2.415-2.671" transform="translate(-850.312 -605.25)"/>
 </svg>
