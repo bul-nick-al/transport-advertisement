@@ -10,13 +10,13 @@ const Logo = styled.img`
 `;
 
 const Base = styled.footer`
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 161px;
-    background-image: linear-gradient(to bottom, #00aeef , #1991eb);
+    background-image: linear-gradient(to bottom, #00aeef, #1991eb);
     text-align: left;
 `;
 

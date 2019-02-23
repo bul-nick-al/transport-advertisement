@@ -62,6 +62,6 @@ module.exports = {
         'react-dom': 'react-dom',
         redux: 'redux',
         'react-redux': 'react-redux',
-        // 'styled-components': 'styled-components'
+        // 'styled-components': 'styled-components',
     },
 };
