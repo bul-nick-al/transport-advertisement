@@ -14,6 +14,7 @@ module.exports = {
         filename: '[name].js',
         path: path.resolve(__dirname, outputDirectory),
         libraryTarget: 'umd',
+        // publicPath: '/transport/',
         publicPath: '/',
     },
     node: {
@@ -26,6 +27,7 @@ module.exports = {
         new CleanWebpackPlugin([outputDirectory]),
         new webpackCopy([
             { from: 'node_modules/mpbootstrap/dist' },
+            { from: 'importmap.json' },
             { from: 'node_modules/systemjs/dist', to: 'extlib/systemjs' },
             { from: 'node_modules/react/umd', to: 'extlib/react' },
             { from: 'node_modules/react-dom/umd', to: 'extlib/react-dom' },
@@ -34,6 +36,10 @@ module.exports = {
             {
                 from: 'node_modules/styled-components/dist',
                 to: 'extlib/styled-components',
+            },
+            {
+                from: 'node_modules/react-router-dom/umd',
+                to: 'extlib/react-router-dom',
             },
         ]),
         new webpack.ProvidePlugin({
@@ -58,8 +64,18 @@ module.exports = {
                 loader: 'awesome-typescript-loader',
             },
             {
-                test: /\.(jpe?g|gif|png|svg|woff|ttf|eot|wav|mp3)$/,
-                loader: 'file-loader',
+                test: /\.(jpe?g|gif|svg|png|woff|ttf|eot|wav|mp3)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            limit: 12000,
+                            name(file) {
+                                return 'public/[name].[ext]';
+                            },
+                        },
+                    },
+                ],
             },
         ],
     },
@@ -68,6 +84,6 @@ module.exports = {
         'react-dom': 'react-dom',
         redux: 'redux',
         'react-redux': 'react-redux',
-        'styled-components': 'styled-components',
+        // 'styled-components': 'styled-components',
     },
 };

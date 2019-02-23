@@ -1,11 +1,30 @@
-import Body from './Body';
 import { connect } from 'react-redux';
+import * as React from 'react';
+import styled from 'styled-components';
+
+import StepBar from '../StepBar';
+import { ChooseTilesContainer } from '../../../orderflow/components/ChooseTilesContainer';
 
 const mapStateToProps = state => ({});
 
 const mapDispatchToProps = dispatch => ({});
 
+const Body = styled.div`
+    height: 100%;
+`;
+
+class BodyContainer extends React.Component<any, any> {
+    render() {
+        return (
+            <Body>
+                <StepBar />
+                <ChooseTilesContainer />
+            </Body>
+        );
+    }
+}
+
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Body);
+)(BodyContainer);

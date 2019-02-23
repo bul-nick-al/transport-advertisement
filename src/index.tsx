@@ -4,9 +4,16 @@ import { connect } from 'react-redux';
 import { FooterContainer } from './bundle/common/components/Footer';
 import { HeaderContainer } from './bundle/common/components/Header';
 import { BodyContainer } from './bundle/common/components/Body';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import routes from './bundle/orderflow/routes/orderflow';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0px;
+    padding: 0px;
+    background: #eff3f6;
+  }
+`;
 
 class Main extends React.PureComponent<any, any> {
     // componentDidMount() {}
@@ -14,21 +21,11 @@ class Main extends React.PureComponent<any, any> {
     render() {
         return (
             <div>
-                <HeaderContainer />
-                <Router>
-                    <div>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/orderflow">Order</Link>
-                            </li>
-                        </ul>
-                        {routes}
-                        <Route exact path="/" component={BodyContainer} />
-                    </div>
-                </Router>
+                <GlobalStyle />
+                <HeaderContainer
+                    openApp={() => this.props.openApp('defaultapp')}
+                />
+                <BodyContainer />
                 <FooterContainer />
             </div>
         );
