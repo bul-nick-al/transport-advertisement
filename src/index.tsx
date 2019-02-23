@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0px;
     padding: 0px;
-    background-color: black;
+    background: #eff3f6;
   }
 `;
 
@@ -22,7 +22,9 @@ class Main extends React.PureComponent<any, any> {
         return (
             <div>
                 <GlobalStyle />
-                <HeaderContainer />
+                <HeaderContainer
+                    openApp={() => this.props.openApp('defaultapp')}
+                />
                 <BodyContainer />
                 <FooterContainer />
             </div>
