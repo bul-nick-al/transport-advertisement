@@ -15,17 +15,32 @@ class ChooseTilesContainer extends React.Component<any, any> {
             {
                 id: 0,
                 name: 'Пазики',
-                img: require('../../../../assets/img/pazik.png'),
+                img: require('../../../../assets/vehicles/pazik.png'),
             },
             {
                 id: 1,
                 name: 'Такси',
-                img: require('../../../../assets/img/taxi.png'),
+                img: require('../../../../assets/vehicles/taxi.png'),
             },
             {
                 id: 0,
                 name: 'Трамваи',
-                img: require('../../../../assets/img/tram.png'),
+                img: require('../../../../assets/vehicles/tram.png'),
+            },
+            {
+                id: 0,
+                name: 'Автобусы',
+                img: require('../../../../assets/vehicles/bus.png'),
+            },
+            {
+                id: 0,
+                name: 'Тролейбусы',
+                img: require('../../../../assets/vehicles/trolley.png'),
+            },
+            {
+                id: 0,
+                name: 'Маршрутное такси',
+                img: require('../../../../assets/vehicles/small-bus.png'),
             },
         ],
     };
