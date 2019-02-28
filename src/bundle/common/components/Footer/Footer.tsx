@@ -5,7 +5,7 @@ const phoneNumber = '+78008886677';
 
 const Logo = styled.img`
     position: relative;
-    top 30px;
+    top: 30px;
     left: 30px;
 `;
 

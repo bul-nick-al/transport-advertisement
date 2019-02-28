@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { CheckBox } from '../../../common/components/CheckBox';
 
 const Tile = styled.div`
     display: inline-block;
@@ -38,13 +39,22 @@ const Desc = styled.span`
 const Radio = styled.input``;
 
 class TransportTileChose extends React.Component<any, any> {
+    state = { checked: false };
+    handleCheckboxChange = event =>
+        this.setState({ checked: event.target.checked });
     render() {
         return (
             <Tile>
                 <Image src={this.props.img} />
                 <Name>{this.props.name}</Name>
                 <Desc>Вместимость: малая</Desc>
-                <Radio type="checkbox" />
+                <label>
+                    <CheckBox
+                        checked={this.state.checked}
+                        onChange={this.handleCheckboxChange}
+                    />
+                </label>
+                {/* <Radio type="checkbox" /> */}
             </Tile>
         );
     }
