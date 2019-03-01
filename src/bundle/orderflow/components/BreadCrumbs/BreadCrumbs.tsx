@@ -24,7 +24,6 @@ const Arrows = styled.img<BreadCrumb>`
     visibility: ${props => (props.isActive ? 'hidden' : 'visible')};
     width: 10px;
     height: auto;
-    // padding: 15px 10px 5px 10px;
 `;
 
 const BreadCrumbs = (props: BreadCrumbProps) => {
