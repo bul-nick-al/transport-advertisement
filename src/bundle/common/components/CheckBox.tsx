@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, from 'styled-components';
 
 const Icon = styled.svg`
     fill: none;
@@ -20,7 +20,11 @@ const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
     width: 1px;
 `;
 
-const StyledCheckbox = styled.div`
+interface StyledCheckboxProps {
+    checked: boolean;
+}
+
+const StyledCheckbox = styled.div<StyledCheckboxProps>`
     display: inline-block;
     width: 30px;
     height: 30px;
