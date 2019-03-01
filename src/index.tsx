@@ -16,17 +16,13 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 class Main extends React.PureComponent<any, any> {
-    // componentDidMount() {}
-
     render() {
         return (
             <div>
                 <GlobalStyle />
-                <HeaderContainer
-                    openApp={() => this.props.openApp('defaultapp')}
-                />
+                <HeaderContainer openApp={this.props.openApp} />
                 <BodyContainer />
-                <FooterContainer />
+                <FooterContainer {...this.props} />
             </div>
         );
     }

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import CheckBox from '../../../common/components/CheckBox';
 
 const Tile = styled.div`
     display: inline-block;
@@ -44,7 +45,9 @@ class TransportTileChose extends React.Component<any, any> {
                 <Image src={this.props.img} />
                 <Name>{this.props.name}</Name>
                 <Desc>Вместимость: малая</Desc>
-                <Radio type="checkbox" />
+                <label>
+                    <CheckBox />
+                </label>
             </Tile>
         );
     }
