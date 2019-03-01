@@ -21,7 +21,7 @@ const mockedBreadCrumbs: BreadCrumb[] = [
     {
         name: 'Оформаление заказа',
         action: () => console.warn('Оформаление заказа has been clicked'),
-        isActive: false,
+        isActive: true,
     },
 ];
 

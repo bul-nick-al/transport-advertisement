@@ -16,13 +16,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 class Main extends React.PureComponent<any, any> {
-    componentDidMount() {
-        this.props.initFlow({
-            flowName: 'transportFlow',
-            url: 'transport-bh',
-        });
-    }
-
     render() {
         return (
             <div>
