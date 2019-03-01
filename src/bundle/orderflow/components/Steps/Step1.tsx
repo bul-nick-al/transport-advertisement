@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { ChooseTilesContainer } from '../../../orderflow/components/ChooseTilesContainer';
 import StepBar from '../../../common/components/StepBar';
+import { BreadCrumbsContainer } from '../BreadCrumbs';
 
 const Body = styled.div`
     height: 100%;
@@ -15,6 +16,7 @@ const Step1 = props => {
                 onClickBack={() => props.sendStateEvent('back')}
                 onClickNext={() => props.sendStateEvent('next')}
             />
+            <BreadCrumbsContainer />
             <ChooseTilesContainer />
         </Body>
     );
