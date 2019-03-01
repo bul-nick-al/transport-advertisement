@@ -27,7 +27,7 @@ module.exports = {
                 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch',
         }),
     ],
-    // devtool: '#source-map',
+    //devtool: '#source-map',
     devtool: 'none',
     resolve: {
         modules: ['node_modules', 'src'],
@@ -62,6 +62,6 @@ module.exports = {
         'react-dom': 'react-dom',
         redux: 'redux',
         'react-redux': 'react-redux',
-        'styled-components': 'styled-components',
+        // 'styled-components': 'styled-components',
     },
 };

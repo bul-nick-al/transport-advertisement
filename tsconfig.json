@@ -8,11 +8,12 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": false,
-        "esModuleInterop": true,
         "module": "commonjs",
         "target": "es5",
         "jsx": "react",
-        "typeRoots": ["node_modules/@types", "./custom.d.ts"]
+        "typeRoots": ["node_modules/@types"]
     },
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules"],
+    "files": ["./custom.d.ts"],
+    "include": ["./custom.d.ts"]
 }

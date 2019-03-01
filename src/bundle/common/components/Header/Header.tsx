@@ -1,8 +1,6 @@
 import * as React from 'react';
 
-import logo from '../../../../assets/logo/logo.svg';
 import styled from 'styled-components';
-import { HeaderButton, HeaderButtonTrans } from '../Buttons';
 
 const Base = styled.header`
     left: 0;
@@ -12,9 +10,6 @@ const Base = styled.header`
     background-image: linear-gradient(to bottom, #00aeef, #1991eb);
     color: white;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 `;
 
 const Logo = styled.img`
@@ -23,21 +18,13 @@ const Logo = styled.img`
     left: 30px;
 `;
 
-const ButtonWrapper = styled.div``;
-
 const Header = ({ openApp }) => {
     return (
         <Base>
-            <Logo src={logo} onClick={() => openApp('defaultapp')} />
-            <HeaderButtonTrans onClick={() => openApp('team3')}>
-                Реклама на радио
-            </HeaderButtonTrans>
-            <HeaderButton onClick={() => openApp('transport/transportadvapp')}>
-                Реклама на транспорте
-            </HeaderButton>
-            <HeaderButtonTrans onClick={() => openApp('elevators/elevators')}>
-                Реклама в лифтах
-            </HeaderButtonTrans>
+            <Logo
+                src={require('../../../../assets/logo/logo.svg')}
+                onClick={openApp}
+            />
         </Base>
     );
 };

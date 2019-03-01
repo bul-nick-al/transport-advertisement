@@ -37,6 +37,10 @@ module.exports = {
                 from: 'node_modules/styled-components/dist',
                 to: 'extlib/styled-components',
             },
+            {
+                from: 'node_modules/react-router-dom/umd',
+                to: 'extlib/react-router-dom',
+            },
         ]),
         new webpack.ProvidePlugin({
             Promise:
@@ -80,6 +84,6 @@ module.exports = {
         'react-dom': 'react-dom',
         redux: 'redux',
         'react-redux': 'react-redux',
-        'styled-components': 'styled-components',
+        // 'styled-components': 'styled-components',
     },
 };

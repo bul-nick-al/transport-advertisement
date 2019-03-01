@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 import StepBar from '../StepBar';
 import { ChooseTilesContainer } from '../../../orderflow/components/ChooseTilesContainer';
-import { BreadCrumbsContainer } from '../../../orderflow//components/BreadCrumbs';
 
 const mapStateToProps = state => ({});
 
@@ -19,7 +18,6 @@ class BodyContainer extends React.Component<any, any> {
         return (
             <Body>
                 <StepBar />
-                <BreadCrumbsContainer />
                 <ChooseTilesContainer />
             </Body>
         );
