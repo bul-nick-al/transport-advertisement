@@ -20,7 +20,11 @@ const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
     width: 1px;
 `;
 
-const StyledCheckbox = styled.div`
+interface StyledCheckboxProps {
+    checked: boolean;
+}
+
+const StyledCheckbox = styled.div<StyledCheckboxProps>`
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -42,7 +46,7 @@ class CheckBox extends React.Component<CheckBoxProps, CheckBoxState> {
     state = { checked: false };
 
     handleCheckboxChange = event =>
-        this.setState({ checked: event.target.checked });
+        this.setState({ checked: event.target.checked })
 
     render() {
         return (

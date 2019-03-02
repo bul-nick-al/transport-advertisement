@@ -1,12 +1,16 @@
 import * as React from 'react';
-import * as styled from 'styled-components';
+import styled from 'styled-components';
 import { StepInterface } from './interfaces';
 
 const mapStateToProps = state => ({});
 
 const mapDispatchToProps = dispatch => ({});
 
-const StepElement = styled.div`
+interface StepElementProps {
+    isActive: boolean;
+}
+
+const StepElement = styled.div<StepElementProps>`
   display: inline-block;
   color: ${props => (props.isActive ? 'black' : '#a6abb3')};
   margin-right: 20px;

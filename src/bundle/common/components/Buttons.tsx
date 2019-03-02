@@ -1,7 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-export const ProceedButton = props => {
+export const ProceedButton = (
+    props: React.ButtonHTMLAttributes<HTMLButtonElement>
+) => {
     const Button = styled.button`
         background-color: #38b349;
         height: 36px;
@@ -16,7 +18,9 @@ export const ProceedButton = props => {
     return <Button {...props} />;
 };
 
-export const HeaderButton = props => {
+export const HeaderButton = (
+    props: React.ButtonHTMLAttributes<HTMLButtonElement>
+) => {
     const Button = styled.button`
         padding: 5px 15px 5px;
         background-color: #1166a5;
@@ -31,7 +35,9 @@ export const HeaderButton = props => {
     return <Button {...props} />;
 };
 
-export const HeaderButtonTrans = props => {
+export const HeaderButtonTrans = (
+    props: React.ButtonHTMLAttributes<HTMLButtonElement>
+) => {
     const Button = styled.button`
         background-color: rgba(0, 0, 0, 0);
         padding: 5px 15px 5px;

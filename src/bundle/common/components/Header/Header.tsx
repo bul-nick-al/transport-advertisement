@@ -22,20 +22,33 @@ const Logo = styled.img`
     top: 19px;
     left: 30px;
 `;
-
 const ButtonWrapper = styled.div``;
 
-const Header = ({ openApp }) => {
+interface HeaderInterface {
+    openApp: (appName: String) => void;
+    exitApp: () => void;
+}
+
+const Header = ({ openApp, exitApp }: HeaderInterface) => {
+    const openAnotherApp = (name: String) => {
+        exitApp();
+        openApp(name);
+    };
+
     return (
         <Base>
-            <Logo src={logo} onClick={() => openApp('defaultapp')} />
-            <HeaderButtonTrans onClick={() => openApp('team3')}>
+            <Logo src={logo} onClick={() => openAnotherApp('defaultapp')} />
+            <HeaderButtonTrans onClick={() => openAnotherApp('team3')}>
                 Реклама на радио
             </HeaderButtonTrans>
-            <HeaderButton onClick={() => openApp('transport/transportadvapp')}>
+            <HeaderButton
+                onClick={() => openAnotherApp('transport/transportadvapp')}
+            >
                 Реклама на транспорте
             </HeaderButton>
-            <HeaderButtonTrans onClick={() => openApp('elevators/elevators')}>
+            <HeaderButtonTrans
+                onClick={() => openAnotherApp('elevators/elevators')}
+            >
                 Реклама в лифтах
             </HeaderButtonTrans>
         </Base>
