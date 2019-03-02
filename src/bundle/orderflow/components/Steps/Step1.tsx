@@ -12,10 +12,7 @@ const Body = styled.div`
 const Step1 = props => {
     return (
         <Body>
-            <StepBar
-                onClickBack={() => props.sendStateEvent('back')}
-                onClickNext={() => props.sendStateEvent('next')}
-            />
+            <StepBar onClickNext={() => props.sendStateEvent('next')} />
             <BreadCrumbsContainer />
             <ChooseTilesContainer />
         </Body>
