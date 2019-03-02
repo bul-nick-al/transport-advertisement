@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { ProceedButton } from './Buttons';
+import StepLineContainer from './StepLine/StepLineContainer';
 
 const Base = styled.div`
     background-color: white;
@@ -25,10 +26,14 @@ const City = styled.div`
 const ProceedButtonWrapper = styled.div`
     flex-grow: 1;
 `;
+
+const Steps = ['one', 'two', 'three'];
+const activeStep = 0;
 const StepBar = () => {
     return (
         <Base>
             <City>Город: Хабаровск</City>
+            <StepLineContainer steps={Steps} activeStep={activeStep}/>
             <SpaceBetween />
             <ProceedButtonWrapper>
                 <ProceedButton>Далее ➜</ProceedButton>
