@@ -25,14 +25,31 @@ const City = styled.div`
 const ProceedButtonWrapper = styled.div`
     flex-grow: 1;
 `;
-const StepBar = () => {
+
+interface StepBarProps {
+    onClickNext?: () => void;
+    onClickBack?: () => void;
+}
+
+const StepBar = (props: StepBarProps) => {
     return (
         <Base>
             <City>Город: Хабаровск</City>
+            {props.onClickBack && (
+                <ProceedButtonWrapper>
+                    <ProceedButton onClick={props.onClickBack}>
+                        ← Назад
+                    </ProceedButton>
+                </ProceedButtonWrapper>
+            )}
             <SpaceBetween />
-            <ProceedButtonWrapper>
-                <ProceedButton>Далее ➜</ProceedButton>
-            </ProceedButtonWrapper>
+            {props.onClickNext && (
+                <ProceedButtonWrapper>
+                    <ProceedButton onClick={props.onClickNext}>
+                        Далее →
+                    </ProceedButton>
+                </ProceedButtonWrapper>
+            )}
         </Base>
     );
 };

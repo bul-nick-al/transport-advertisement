@@ -20,8 +20,11 @@ class Main extends React.PureComponent<any, any> {
         return (
             <div>
                 <GlobalStyle />
-                <HeaderContainer openApp={this.props.openApp} />
-                <BodyContainer />
+                <HeaderContainer
+                    openApp={this.props.openApp}
+                    exitApp={this.props.exitApp}
+                />
+                <BodyContainer {...this.props} />
                 <FooterContainer {...this.props} />
             </div>
         );

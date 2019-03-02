@@ -26,6 +26,7 @@ module.exports = {
             fetch:
                 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch',
         }),
+        new webpackCopy([{ from: 'stub/', to: 'stub/' }]),
     ],
     // devtool: '#source-map',
     devtool: 'none',
