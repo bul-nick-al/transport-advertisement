@@ -7,6 +7,7 @@ const Container = styled.div`
     align-items: flex-start;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 `;
 
 class ChooseTilesContainer extends React.Component<any, any> {
