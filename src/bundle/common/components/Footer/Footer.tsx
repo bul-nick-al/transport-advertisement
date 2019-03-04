@@ -1,5 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import mediaPultLogo from '../../../../assets/logo/logo.svg';
+import vkLogo from '../../../../assets/social/vk.svg';
+import twitterLogo from '../../../../assets/social/twitter.svg';
+import youtubeLogo from '../../../../assets/social/youtube.svg';
+import facebookLogo from '../../../../assets/social/facebook.svg';
+import googleLogo from '../../../../assets/social/google.svg';
+import instagramLogo from '../../../../assets/social/instagram.svg';
+import linkedInLogo from '../../../../assets/social/linkedIn.svg';
+import okLogo from '../../../../assets/social/ok.svg';
 
 const phoneNumber = '+78008886677';
 
@@ -52,7 +61,7 @@ const PhoneNumber = styled.div`
 
 const Footer = () => (
     <Base>
-        <Logo src={require('../../../../assets/logo/logo.svg')} alt={'logo'} />
+        <Logo src={mediaPultLogo} alt={'logo'} />
         <PhoneNumber>{phoneNumber}</PhoneNumber>
         <Links>
             <Link href="url">Носители</Link>
@@ -62,35 +71,35 @@ const Footer = () => (
         <Links>
             <SocialIcons>
                 <SocialIcon
-                    src={require('../../../../assets/social/vk.svg')}
+                    src={vkLogo}
                     alt={'vk'}
                 />
                 <SocialIcon
-                    src={require('../../../../assets/social/twitter.svg')}
+                    src={twitterLogo}
                     alt={'twitter'}
                 />
                 <SocialIcon
-                    src={require('../../../../assets/social/youtube.svg')}
+                    src={youtubeLogo}
                     alt={'youtube'}
                 />
                 <SocialIcon
-                    src={require('../../../../assets/social/facebook.svg')}
+                    src={facebookLogo}
                     alt={'facebook'}
                 />
                 <SocialIcon
-                    src={require('../../../../assets/social/google.svg')}
+                    src={googleLogo}
                     alt={'google'}
                 />
                 <SocialIcon
-                    src={require('../../../../assets/social/instagram.svg')}
+                    src={instagramLogo}
                     alt={'instagram'}
                 />
                 <SocialIcon
-                    src={require('../../../../assets/social/linkedIn.svg')}
+                    src={linkedInLogo}
                     alt={'linkedIn'}
                 />
                 <SocialIcon
-                    src={require('../../../../assets/social/ok.svg')}
+                    src={okLogo}
                     alt={'ok'}
                 />
             </SocialIcons>

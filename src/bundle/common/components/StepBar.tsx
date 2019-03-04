@@ -1,6 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { ProceedButton } from './Buttons';
+import StepLineContainer from './StepLine/StepLineContainer';
+
+interface StepBarProps {
+    onClickNext?: () => void;
+    onClickBack?: () => void;
+}
 
 const Base = styled.div`
     background-color: white;
@@ -25,14 +31,29 @@ const City = styled.div`
 const ProceedButtonWrapper = styled.div`
     flex-grow: 1;
 `;
-const StepBar = () => {
+
+const Steps = ['one', 'two', 'three'];
+const activeStep = 0;
+const StepBar = (props: StepBarProps) => {
     return (
         <Base>
             <City>Город: Хабаровск</City>
+            {props.onClickBack && (
+                <ProceedButtonWrapper>
+                    <ProceedButton onClick={props.onClickBack}>
+                        ← Назад
+                    </ProceedButton>
+                </ProceedButtonWrapper>
+            )}
+            <StepLineContainer steps={Steps} activeStep={activeStep}/>
             <SpaceBetween />
-            <ProceedButtonWrapper>
-                <ProceedButton>Далее ➜</ProceedButton>
-            </ProceedButtonWrapper>
+            {props.onClickNext && (
+                <ProceedButtonWrapper>
+                    <ProceedButton onClick={props.onClickNext}>
+                        Далее →
+                    </ProceedButton>
+                </ProceedButtonWrapper>
+            )}
         </Base>
     );
 };
