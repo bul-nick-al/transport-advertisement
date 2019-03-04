@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import StepBar from '../StepBar';
 import { ChooseTilesContainer } from '../../../orderflow/components/ChooseTilesContainer';
 import { BreadCrumbsContainer } from '../../../orderflow//components/BreadCrumbs';
+import { RoutesTableContainer } from '../../../orderflow/components/RoutesTable';
 
 const mapStateToProps = state => ({});
 
@@ -20,6 +21,7 @@ class BodyContainer extends React.Component<any, any> {
             <Body>
                 <StepBar />
                 <BreadCrumbsContainer />
+                <RoutesTableContainer />
                 <ChooseTilesContainer />
             </Body>
         );

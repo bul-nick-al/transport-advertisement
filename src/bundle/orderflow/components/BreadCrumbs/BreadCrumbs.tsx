@@ -15,23 +15,25 @@ const Container = styled.div`
 const Crumb = styled.span<BreadCrumb>`
     display: inline-block;
     vertical-align: middle;
-    color: ${props => (props.isActive ? '#848c98' : '#a6abb3')};
+    color: ${props => (props.isCurrent ? '#848c98' : '#a6abb3')};
     display: inline-block;
     margin: 5px 10px;
 `;
 
 const Arrows = styled.img<BreadCrumb>`
-    visibility: ${props => (props.isActive ? 'hidden' : 'visible')};
-    width: 10px;
+    visibility: ${props => (props.isCurrent ? 'hidden' : 'visible')};
+    width: 7px;
     height: auto;
 `;
 
 const BreadCrumbs = (props: BreadCrumbProps) => {
     return (
         <Container>
-            {props.breadCrumbs.map(crumb => (
+            {props.breadCrumbs.map((crumb, i) => (
                 <React.Fragment>
-                    <Crumb {...crumb}>{crumb.name}</Crumb>
+                    <Crumb {...crumb} onClick={crumb.action}>
+                        {crumb.name}
+                    </Crumb>
                     <Arrows src={arrows} {...crumb} />
                 </React.Fragment>
             ))}
