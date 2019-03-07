@@ -2,35 +2,71 @@ import * as React from 'react';
 import { RouteTableInterface } from './interfaces';
 
 import styled from 'styled-components';
+import CheckBox from '../../../common/components/CheckBox';
 
 interface TableProps {
     table: RouteTableInterface;
 }
 
+const TableContainer = styled.div`
+    display: inline-block;
+    border-width: 1px;
+    border-color: rgb(230, 234, 238);
+    border-style: solid;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    flex-shrink: 0;
+    -webkit-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
+    -moz-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
+    box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
+    margin: 15px 30px;
+`;
+
 const RouteTable = styled.table`
-    border: 1px solid black;
     border-collapse: collapse;
+    width: 100%;
+`;
+
+const TableData = styled.td`
+    vertical-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
 `;
 
 const TableRow = styled.tr`
-    border: 1px solid black;
-    border-collapse: collapse;
     padding: 15px;
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+    ${TableData}:first-child {
+        font-size: 15px;
+    }
+    ${TableData}:nth-child(2) {
+        font-size: 13px;
+        color: #848c98;
+    }
 `;
 
 const RoutesTable = (props: TableProps) => {
-    console.log('Props', props);
     return (
-        // <React.Fragment>Hi</React.Fragment>
-        <RouteTable>
-            <caption>{props.table.transportName}</caption>
-            {props.table.routes.map(route => (
-                <TableRow>
-                    <td>{route.routeName}</td>
-                    <td>{route.routeStops}</td>
-                </TableRow>
-            ))}
-        </RouteTable>
+        <TableContainer>
+            <RouteTable>
+                <caption>
+                    <h2>{props.table.transportName}</h2>
+                </caption>
+                {props.table.routes.map(route => (
+                    <TableRow>
+                        <TableData>{route.routeName}</TableData>
+                        <TableData>{route.routeStops}</TableData>
+                        <TableData>
+                            <label>
+                                <CheckBox />
+                            </label>
+                        </TableData>
+                    </TableRow>
+                ))}
+            </RouteTable>
+        </TableContainer>
     );
 };
 

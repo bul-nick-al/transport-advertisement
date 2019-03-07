@@ -1,6 +1,15 @@
 import * as React from 'react';
 import { RouteTableInterface } from './interfaces';
 import RoutesTable from './RoutesTable';
+import styled from 'styled-components';
+
+const TableContainer = styled.div`
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+`;
 
 const mockedRoutesTables: RouteTableInterface[] = [
     {
@@ -12,14 +21,24 @@ const mockedRoutesTables: RouteTableInterface[] = [
             { routeName: 'Маршрут №4', routeStops: 'Рынок - Вокзал' },
         ],
     },
-    // {
-    //     transportName: 'Троллейбусы',
-    //     routes: [
-    //         { routeName: 'Маршрут №1', routeStops: 'Холодная Гора - Вокзал' },
-    //         { routeName: 'Маршрут №2', routeStops: 'Рынок - Вокзал' },
-    //         { routeName: 'Маршрут №3', routeStops: 'Холодная Гора - Рынок' },
-    //     ],
-    // },
+    {
+        transportName: 'Троллейбусы',
+        routes: [
+            { routeName: 'Маршрут №1', routeStops: 'Холодная Гора - Вокзал' },
+            { routeName: 'Маршрут №2', routeStops: 'Рынок - Вокзал' },
+            { routeName: 'Маршрут №3', routeStops: 'Холодная Гора - Рынок' },
+        ],
+    },
+    {
+        transportName: 'Троллейбусы',
+        routes: [
+            { routeName: 'Маршрут №1', routeStops: 'Холодная Гора - Вокзал' },
+            { routeName: 'Маршрут №2', routeStops: 'Рынок - Вокзал' },
+            { routeName: 'Маршрут №3', routeStops: 'Холодная Гора - Рынок' },
+            { routeName: 'Маршрут №3', routeStops: 'Холодная Гора - Рынок' },
+            { routeName: 'Маршрут №3', routeStops: 'Холодная Гора - Рынок' },
+        ],
+    },
 ];
 
 class RoutesTableContainer extends React.Component<any, any> {
@@ -29,12 +48,11 @@ class RoutesTableContainer extends React.Component<any, any> {
     }
     render() {
         return (
-            <React.Fragment>
-                {mockedRoutesTables.map(table => {
-                    console.log('Table', table);
-                    return <RoutesTable table={table} />;
-                })}
-            </React.Fragment>
+            <TableContainer>
+                {mockedRoutesTables.map(table => (
+                    <RoutesTable table={table} />
+                ))}
+            </TableContainer>
         );
     }
 }
