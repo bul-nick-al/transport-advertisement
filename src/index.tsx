@@ -12,6 +12,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0px;
     padding: 0px;
     background: #eff3f6;
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+    font-family: 'Open Sans', sans-serif;
   }
 `;
 

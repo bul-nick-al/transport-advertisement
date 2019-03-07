@@ -25,14 +25,12 @@ const Image = styled.img`
 
 const Name = styled.p`
     font-size: 16px;
-    font-family: 'ProximaNova';
     color: rgb(29, 37, 49);
     line-height: 2.5;
 `;
 
 const Desc = styled.span`
     font-size: 13px;
-    font-family: 'ProximaNova';
     color: rgb(132, 140, 152);
     line-height: 1.846;
 `;
