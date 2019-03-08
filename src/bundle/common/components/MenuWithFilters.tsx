@@ -1,17 +1,21 @@
 import * as React from 'react';
-import { RouteTableInterface } from './interfaces';
-
 import styled from 'styled-components';
-import CheckBox from '../../../common/components/CheckBox';
+import CheckBox from '../../common/components/CheckBox';
 
-const TableContainer = styled.div`
+interface MenuWithFiltersProps {
+    regions: string[];
+}
+
+interface MenuWithFiltersState {}
+
+const MenuContainer = styled.div`
     display: inline-block;
     border-width: 1px;
     border-color: rgb(230, 234, 238);
     border-style: solid;
     border-radius: 4px;
     background-color: rgb(255, 255, 255);
-    width: 400px;
+    width: 270px;
     flex-shrink: 0;
     -webkit-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
     -moz-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
@@ -19,9 +23,14 @@ const TableContainer = styled.div`
     margin: 15px 30px;
 `;
 
-const RouteTable = styled.table`
+const MenuTable = styled.table`
     border-collapse: collapse;
     width: 100%;
+`;
+
+const MyCaption = styled.caption`
+    color: #848c98;
+    text-transform: uppercase;
 `;
 
 const TableData = styled.td`
@@ -43,45 +52,32 @@ const TableRow = styled.tr`
     }
 `;
 
-interface TableProps {
-    table: RouteTableInterface;
-}
-
-interface ChosenRoute {
-    id: number;
-    name: string;
-}
-
-class RoutesTable extends React.Component<TableProps, any> {
-    constructor(props: TableProps) {
-        super(props);
-
-        this.state = {
-            chosenRoutes: []
-        };
-    }
-
+class MenuWithFilters extends React.Component<
+    MenuWithFiltersProps,
+    MenuWithFiltersState
+> {
+    state = {};
     VarCheckBox = <CheckBox />;
+
     render() {
         return (
-            <TableContainer>
-                <RouteTable>
-                    <caption>
-                        <h2>{this.props.table.transportName}</h2>
-                    </caption>
-                    {this.props.table.routes.map(route => (
+            <MenuContainer>
+                <MenuTable>
+                    <MyCaption>
+                        <p>Выбранные районы</p>
+                    </MyCaption>
+                    {this.props.regions.map(region => (
                         <TableRow>
-                            <TableData>{route.routeName}</TableData>
-                            <TableData>{route.routeStops}</TableData>
+                            <TableData>{region}</TableData>
                             <TableData>
                                 <label>{this.VarCheckBox}</label>
                             </TableData>
                         </TableRow>
                     ))}
-                </RouteTable>
-            </TableContainer>
+                </MenuTable>
+            </MenuContainer>
         );
     }
 }
 
-export default RoutesTable;
+export default MenuWithFilters;
