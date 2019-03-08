@@ -10,6 +10,7 @@ const Tile = styled.div`
     border-radius: 4px;
     background-color: rgb(255, 255, 255);
     width: 168px;
+    flex-shrink: 0;
     height: 179px;
     -webkit-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
     -moz-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
@@ -24,14 +25,12 @@ const Image = styled.img`
 
 const Name = styled.p`
     font-size: 16px;
-    font-family: 'ProximaNova';
     color: rgb(29, 37, 49);
     line-height: 2.5;
 `;
 
 const Desc = styled.span`
     font-size: 13px;
-    font-family: 'ProximaNova';
     color: rgb(132, 140, 152);
     line-height: 1.846;
 `;

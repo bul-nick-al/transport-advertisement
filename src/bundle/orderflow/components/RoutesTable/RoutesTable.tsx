@@ -1,48 +1,73 @@
 import * as React from 'react';
+import { RouteTableInterface } from './interfaces';
 
 import styled from 'styled-components';
+import CheckBox from '../../../common/components/CheckBox';
 
-export interface RoutesTableProps {}
+interface TableProps {
+    table: RouteTableInterface;
+}
 
-export interface RoutesTableState {}
+const TableContainer = styled.div`
+    display: inline-block;
+    border-width: 1px;
+    border-color: rgb(230, 234, 238);
+    border-style: solid;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    flex-shrink: 0;
+    -webkit-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
+    -moz-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
+    box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
+    margin: 15px 30px;
+`;
 
-const RoutTable = styled.table`
-    border: 1px solid black;
+const RouteTable = styled.table`
     border-collapse: collapse;
+    width: 100%;
+`;
+
+const TableData = styled.td`
+    vertical-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
 `;
 
 const TableRow = styled.tr`
-    border: 1px solid black;
-    border-collapse: collapse;
     padding: 15px;
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+    ${TableData}:first-child {
+        font-size: 15px;
+    }
+    ${TableData}:nth-child(2) {
+        font-size: 13px;
+        color: #848c98;
+    }
 `;
 
-class RoutesTable extends React.Component<RoutesTableProps, RoutesTableState> {
-    state = {
-        name: 'Маршрутное такси',
-        rows: [
-            { routeName: 'Маршрут №1', routeStops: 'Холодная Гора - Вокзал' },
-            { routeName: 'Маршрут №2', routeStops: 'Вокзал - Холодная гора' },
-            { routeName: 'Маршрут №3', routeStops: 'Холодная Гора - Рынок' },
-            { routeName: 'Маршрут №4', routeStops: 'Рынок - Вокзал' },
-        ],
-    };
-
-    render() {
-        return (
-            <div>
-                <RoutTable>
-                    <caption>{this.state.name}</caption>
-                    {this.state.rows.map(row => (
-                        <TableRow>
-                            <td>{row.routeName}</td>
-                            <td>{row.routeStops}</td>
-                        </TableRow>
-                    ))}
-                </RoutTable>
-            </div>
-        );
-    }
-}
+const RoutesTable = (props: TableProps) => {
+    return (
+        <TableContainer>
+            <RouteTable>
+                <caption>
+                    <h2>{props.table.transportName}</h2>
+                </caption>
+                {props.table.routes.map(route => (
+                    <TableRow>
+                        <TableData>{route.routeName}</TableData>
+                        <TableData>{route.routeStops}</TableData>
+                        <TableData>
+                            <label>
+                                <CheckBox />
+                            </label>
+                        </TableData>
+                    </TableRow>
+                ))}
+            </RouteTable>
+        </TableContainer>
+    );
+};
 
 export default RoutesTable;

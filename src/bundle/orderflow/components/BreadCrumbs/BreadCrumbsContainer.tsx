@@ -12,16 +12,19 @@ const mockedBreadCrumbs: BreadCrumb[] = [
         name: 'Главная',
         action: () => console.warn('Главная has been clicked'),
         isActive: false,
+        isCurrent: false,
     },
     {
         name: 'Реклама на транспорте',
         action: () => console.warn('Реклама на транспорте has been clicked'),
-        isActive: false,
+        isActive: true,
+        isCurrent: false,
     },
     {
         name: 'Оформаление заказа',
         action: () => console.warn('Оформаление заказа has been clicked'),
         isActive: true,
+        isCurrent: true,
     },
 ];
 
