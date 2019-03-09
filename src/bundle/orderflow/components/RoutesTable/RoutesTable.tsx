@@ -8,6 +8,11 @@ interface TableProps {
     table: RouteTableInterface;
 }
 
+interface ChosenRoute {
+    id: number;
+    name: string;
+}
+
 const TableContainer = styled.div`
     display: inline-block;
     border-width: 1px;
@@ -47,27 +52,36 @@ const TableRow = styled.tr`
     }
 `;
 
-const RoutesTable = (props: TableProps) => {
-    return (
-        <TableContainer>
-            <RouteTable>
-                <caption>
-                    <h2>{props.table.transportName}</h2>
-                </caption>
-                {props.table.routes.map(route => (
-                    <TableRow>
-                        <TableData>{route.routeName}</TableData>
-                        <TableData>{route.routeStops}</TableData>
-                        <TableData>
-                            <label>
-                                <CheckBox />
-                            </label>
-                        </TableData>
-                    </TableRow>
-                ))}
-            </RouteTable>
-        </TableContainer>
-    );
-};
+class RoutesTable extends React.Component<any, any> {
+    constructor(props: TableProps) {
+        super(props);
+
+        this.state = {
+            chosenRoutes: []
+        };
+    }
+
+    VarCheckBox = <CheckBox />;
+    render() {
+        return (
+            <TableContainer>
+                <RouteTable>
+                    <caption>
+                        <h2>{this.props.table.transportName}</h2>
+                    </caption>
+                    {this.props.table.routes.map(route => (
+                        <TableRow>
+                            <TableData>{route.routeName}</TableData>
+                            <TableData>{route.routeStops}</TableData>
+                            <TableData>
+                                <label>{this.VarCheckBox}</label>
+                            </TableData>
+                        </TableRow>
+                    ))}
+                </RouteTable>
+            </TableContainer>
+        );
+    }
+}
 
 export default RoutesTable;
