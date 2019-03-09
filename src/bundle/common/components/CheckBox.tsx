@@ -1,6 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
+export interface CheckBoxProps {
+    checked?: boolean;
+}
+
+export interface CheckBoxState {}
+
 const Icon = styled.svg`
     fill: none;
     stroke: white;
@@ -20,11 +26,7 @@ const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
     width: 1px;
 `;
 
-interface StyledCheckboxProps {
-    checked: boolean;
-}
-
-const StyledCheckbox = styled.div<StyledCheckboxProps>`
+const StyledCheckbox = styled.div<CheckBoxProps>`
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -38,15 +40,12 @@ const CheckboxContainer = styled.div`
     vertical-align: middle;
 `;
 
-export interface CheckBoxProps {}
-
-export interface CheckBoxState {}
-
 class CheckBox extends React.Component<CheckBoxProps, CheckBoxState> {
     state = { checked: false };
 
-    handleCheckboxChange = event =>
+    handleCheckboxChange = event => {
         this.setState({ checked: event.target.checked });
+    };
 
     render() {
         return (
