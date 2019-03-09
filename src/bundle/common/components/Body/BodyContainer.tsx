@@ -10,7 +10,6 @@ const mapDispatchToProps = dispatch => ({});
 
 const Body = styled.div`
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
 `;
 
 const processes = {

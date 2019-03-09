@@ -22,7 +22,6 @@ class Step2 extends React.Component<any, any> {
     }
     setSegment = (segmentId: number) => {
         this.setState({ currentSegmentId: segmentId });
-        console.warn(segmentId);
     };
     render() {
         return (

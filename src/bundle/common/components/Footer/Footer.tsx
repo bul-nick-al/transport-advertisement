@@ -27,7 +27,6 @@ const Base = styled.footer`
     height: 161px;
     background-image: linear-gradient(to bottom, #00aeef, #1991eb);
     text-align: left;
-    font-family: 'Open Sans', sans-serif;
 `;
 
 const Links = styled.div`

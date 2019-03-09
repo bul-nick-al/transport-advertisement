@@ -15,7 +15,6 @@ const Base = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Open Sans', sans-serif;
 `;
 
 const Logo = styled.img`
