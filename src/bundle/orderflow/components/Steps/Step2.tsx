@@ -5,7 +5,7 @@ import StepBar from '../../../common/components/StepBar';
 import SegmentControl, {
     Segment,
 } from '../../../common/components/SegmentControl';
-import { Segment1 } from './Segments';
+import { Segment1, Segment2 } from './Segments';
 
 const Body = styled.div`
     height: 100%;
@@ -18,7 +18,7 @@ const segments: Segment[] = [
 
 const segmentComponents = {
     1: <Segment1 />,
-    2: <div>По маршрутам</div>,
+    2: <Segment2 />,
 };
 
 class Step2 extends React.Component<any, any> {
