@@ -33,7 +33,7 @@ const ProceedButtonWrapper = styled.div`
 `;
 
 const Steps = ['one', 'two', 'three'];
-const activeStep = 0;
+const activeStep = 1;
 const StepBar = (props: StepBarProps) => {
     return (
         <Base>
