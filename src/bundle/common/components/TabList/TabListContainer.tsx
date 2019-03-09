@@ -20,7 +20,7 @@ class TabListContainer extends React.Component<any, any> {
     }
 
     handleTabClick(index: number): void {
-        this.setState({activeTab: index});
+        this.setState({ activeTab: index });
         if (this.props.onTabClick) {
             this.props.onTabClick(index);
         }
@@ -35,7 +35,8 @@ class TabListContainer extends React.Component<any, any> {
                         index={i}
                         isActive={i === this.state.activeTab}
                         onClick={(index: number) => this.handleTabClick(index)}
-                    />))}
+                    />
+                ))}
             </div>
         );
     }
