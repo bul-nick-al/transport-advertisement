@@ -13,7 +13,7 @@ const MockedRegions = [
 const Segment1 = () => {
     return (
         <div>
-            <MenuWithFilters regions={MockedRegions}/>
+            <MenuWithFilters regions={MockedRegions} />
         </div>
     );
 };

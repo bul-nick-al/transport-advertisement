@@ -45,7 +45,7 @@ const StepBar = (props: StepBarProps) => {
                     </ProceedButton>
                 </ProceedButtonWrapper>
             )}
-            <StepLineContainer steps={Steps} activeStep={activeStep}/>
+            <StepLineContainer steps={Steps} activeStep={activeStep} />
             <SpaceBetween />
             {props.onClickNext && (
                 <ProceedButtonWrapper>

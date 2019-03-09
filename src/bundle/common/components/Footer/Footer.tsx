@@ -71,38 +71,14 @@ const Footer = () => (
         </Links>
         <Links>
             <SocialIcons>
-                <SocialIcon
-                    src={vkLogo}
-                    alt={'vk'}
-                />
-                <SocialIcon
-                    src={twitterLogo}
-                    alt={'twitter'}
-                />
-                <SocialIcon
-                    src={youtubeLogo}
-                    alt={'youtube'}
-                />
-                <SocialIcon
-                    src={facebookLogo}
-                    alt={'facebook'}
-                />
-                <SocialIcon
-                    src={googleLogo}
-                    alt={'google'}
-                />
-                <SocialIcon
-                    src={instagramLogo}
-                    alt={'instagram'}
-                />
-                <SocialIcon
-                    src={linkedInLogo}
-                    alt={'linkedIn'}
-                />
-                <SocialIcon
-                    src={okLogo}
-                    alt={'ok'}
-                />
+                <SocialIcon src={vkLogo} alt={'vk'} />
+                <SocialIcon src={twitterLogo} alt={'twitter'} />
+                <SocialIcon src={youtubeLogo} alt={'youtube'} />
+                <SocialIcon src={facebookLogo} alt={'facebook'} />
+                <SocialIcon src={googleLogo} alt={'google'} />
+                <SocialIcon src={instagramLogo} alt={'instagram'} />
+                <SocialIcon src={linkedInLogo} alt={'linkedIn'} />
+                <SocialIcon src={okLogo} alt={'ok'} />
             </SocialIcons>
         </Links>
     </Base>

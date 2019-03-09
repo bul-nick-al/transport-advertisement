@@ -8,7 +8,6 @@ const mapStateToProps = state => ({});
 const mapDispatchToProps = dispatch => ({});
 
 class StepLineContainer extends React.Component<any, any> {
-
     constructor(props: StepsInterface) {
         super(props);
         this.state = { activeStep: this.props.activeStep };
@@ -16,17 +15,22 @@ class StepLineContainer extends React.Component<any, any> {
 
     handleStepClick(order: number): void {
         console.warn(order);
-        this.setState({activeStep: order});
+        this.setState({ activeStep: order });
     }
 
     render() {
         return (
             <div>
                 {this.props.steps.map((step: string, i: number) => (
-                    <Step name={step} order={i} isActive={this.state.activeStep === i} onClick={this.handleStepClick}/>
-                    )
-                )}
-            </div>);
+                    <Step
+                        name={step}
+                        order={i}
+                        isActive={this.state.activeStep === i}
+                        onClick={this.handleStepClick}
+                    />
+                ))}
+            </div>
+        );
     }
 }
 

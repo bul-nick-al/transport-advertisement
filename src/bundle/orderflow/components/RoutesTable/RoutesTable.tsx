@@ -57,7 +57,7 @@ class RoutesTable extends React.Component<TableProps, any> {
         super(props);
 
         this.state = {
-            chosenRoutes: []
+            chosenRoutes: [],
         };
     }
 
