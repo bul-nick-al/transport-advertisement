@@ -1,27 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import CheckBox from '../../common/components/CheckBox';
+import Tile from '../../common/components/Tile';
 
 interface MenuWithFiltersProps {
     regions: string[];
 }
 
 interface MenuWithFiltersState {}
-
-const MenuContainer = styled.div`
-    display: inline-block;
-    border-width: 1px;
-    border-color: rgb(230, 234, 238);
-    border-style: solid;
-    border-radius: 4px;
-    background-color: rgb(255, 255, 255);
-    width: 270px;
-    flex-shrink: 0;
-    -webkit-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
-    -moz-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
-    box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
-    margin: 15px 30px;
-`;
 
 const MenuTable = styled.table`
     border-collapse: collapse;
@@ -57,11 +43,11 @@ class MenuWithFilters extends React.Component<
     MenuWithFiltersState
 > {
     state = {};
-    VarCheckBox = <CheckBox />;
+    VarCheckBox = <CheckBox checked={false} />;
 
     render() {
         return (
-            <MenuContainer>
+            <Tile width={'270px'}>
                 <MenuTable>
                     <MyCaption>
                         <p>Выбранные районы</p>
@@ -75,7 +61,7 @@ class MenuWithFilters extends React.Component<
                         </TableRow>
                     ))}
                 </MenuTable>
-            </MenuContainer>
+            </Tile>
         );
     }
 }

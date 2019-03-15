@@ -3,21 +3,7 @@ import { RouteTableInterface } from './interfaces';
 
 import styled from 'styled-components';
 import CheckBox from '../../../common/components/CheckBox';
-
-const TableContainer = styled.div`
-    display: inline-block;
-    border-width: 1px;
-    border-color: rgb(230, 234, 238);
-    border-style: solid;
-    border-radius: 4px;
-    background-color: rgb(255, 255, 255);
-    width: 400px;
-    flex-shrink: 0;
-    -webkit-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
-    -moz-box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
-    box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
-    margin: 15px 30px;
-`;
+import Tile from '../../../common/components/Tile';
 
 const RouteTable = styled.table`
     border-collapse: collapse;
@@ -61,10 +47,10 @@ class RoutesTable extends React.Component<TableProps, any> {
         };
     }
 
-    VarCheckBox = <CheckBox />;
+    VarCheckBox = <CheckBox checked={false} />;
     render() {
         return (
-            <TableContainer>
+            <Tile width={'400px'}>
                 <RouteTable>
                     <caption>
                         <h2>{this.props.table.transportName}</h2>
@@ -79,7 +65,7 @@ class RoutesTable extends React.Component<TableProps, any> {
                         </TableRow>
                     ))}
                 </RouteTable>
-            </TableContainer>
+            </Tile>
         );
     }
 }
