@@ -1,6 +1,6 @@
 {
     "name": "md-transport-advertisement",
-    "version": "0.1.18",
+    "version": "0.2.4",
     "description": "",
     "main": "index.js",
     "scripts": {
