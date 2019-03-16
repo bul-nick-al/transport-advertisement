@@ -22,6 +22,7 @@ const Base = styled.div`
 `;
 
 const MapWrapper = styled.div`
+  padding-top: 6px;
   height: 100%;
   flex-grow: 1;
   order: 1;
