@@ -16,14 +16,13 @@ const GlobalStyle = createGlobalStyle`
     background: #eff3f6;
     font-family: 'Open Sans', sans-serif;
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
     justify-content: space-between
   }
 `;
 
 const Wrapper = styled.div`
-    min-height: 100vh;
+    min-height: calc(100vh - 161px);
     margin-bottom: -161px;
     padding-bottom: 161px;
 `;
