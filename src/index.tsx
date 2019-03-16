@@ -5,16 +5,26 @@ import { FooterContainer } from './bundle/common/components/Footer';
 import { HeaderContainer } from './bundle/common/components/Header';
 import { BodyContainer } from './bundle/common/components/Body';
 
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
   body {
     margin: 0;
     padding: 0;
+    height: 100%;
     background: #eff3f6;
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
   }
+`;
+
+const Wrapper = styled.div`
+    min-height: calc(100vh - 161px);
+    margin-bottom: -161px;
+    padding-bottom: 161px;
 `;
 
 class Main extends React.PureComponent<any, any> {
@@ -22,11 +32,13 @@ class Main extends React.PureComponent<any, any> {
         return (
             <div>
                 <GlobalStyle />
-                <HeaderContainer
-                    openApp={this.props.openApp}
-                    exitApp={this.props.exitApp}
-                />
-                <BodyContainer {...this.props} />
+                <Wrapper>
+                    <HeaderContainer
+                        openApp={this.props.openApp}
+                        exitApp={this.props.exitApp}
+                    />
+                    <BodyContainer {...this.props} />
+                </Wrapper>
                 <FooterContainer {...this.props} />
             </div>
         );

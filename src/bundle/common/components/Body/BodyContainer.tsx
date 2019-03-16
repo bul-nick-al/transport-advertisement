@@ -1,16 +1,11 @@
 import { connect } from 'react-redux';
 import * as React from 'react';
-import styled from 'styled-components';
 
 import { Step1, Step2, Step3 } from '../../../orderflow/components/Steps/';
 
 const mapStateToProps = state => ({});
 
 const mapDispatchToProps = dispatch => ({});
-
-const Body = styled.div`
-    height: 100%;
-`;
 
 const processes = {
     transportFlow: {
@@ -35,7 +30,7 @@ class BodyContainer extends React.Component<any, any> {
         if (flowName && stateName) {
             Component = processes[flowName][stateName];
         }
-        return <Body>{Component && <Component {...this.props} />}</Body>;
+        return <div>{Component && <Component {...this.props} />}</div>;
     }
 }
 
