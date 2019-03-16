@@ -1,11 +1,13 @@
 export interface StepsInterface {
     steps: string[];
     activeStep: number;
+    disabled?: string[];
 }
 
 export interface StepInterface {
     name: string;
     order: number;
     isActive: boolean;
-    onClick: (order: number) => void;
+    isClickable?: boolean;
+    onClick: (order: number, isClickable: boolean) => void;
 }
