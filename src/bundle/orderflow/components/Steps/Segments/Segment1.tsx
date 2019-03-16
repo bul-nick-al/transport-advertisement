@@ -36,7 +36,7 @@ const Segment1 = () => {
             </Menu>
             <YMaps>
                 <MapWrapper>
-                    <Map defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
+                    <Map width={850} hegiht={1000} defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
                 </MapWrapper>
             </YMaps>
         </Base>
