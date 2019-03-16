@@ -32,7 +32,7 @@ const ProceedButtonWrapper = styled.div`
     flex-grow: 1;
 `;
 
-const Steps = ['one', 'two', 'three'];
+const Steps = ['Первый шаг', 'Второй шаг', 'Третий шаг'];
 const activeStep = 1;
 const StepBar = (props: StepBarProps) => {
     return (
