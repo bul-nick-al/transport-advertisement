@@ -22,7 +22,7 @@ const Base = styled.div`
 `;
 
 const MapWrapper = styled.div`
-    padding-top: 6px;
+    padding: 6px 6px;
     height: 100%;
     flex-grow: 1;
     order: 1;
@@ -36,7 +36,7 @@ const Segment1 = () => {
             </Menu>
             <YMaps>
                 <MapWrapper>
-                    <Map width={850} hegiht={1000} defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
+                    <Map height={500} width={950} defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
                 </MapWrapper>
             </YMaps>
         </Base>
