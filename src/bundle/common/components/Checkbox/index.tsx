@@ -1,6 +1,11 @@
 import * as React from 'react';
 
-import { Icon, HiddenCheckbox, StyledCheckbox, CheckboxContainer } from './styled';
+import {
+    Icon,
+    HiddenCheckbox,
+    StyledCheckbox,
+    CheckboxContainer,
+} from './styled';
 
 export interface CheckBoxProps {
     checked: boolean;

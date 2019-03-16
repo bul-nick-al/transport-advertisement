@@ -11,7 +11,7 @@ interface TileTheme {
 const getTheme: (props: TileStyledProps) => TileTheme = props => {
     return {
         width: props.width,
-        height: props.height ? props.height : 'auto'
+        height: props.height ? props.height : 'auto',
     };
 };
 

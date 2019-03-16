@@ -16,7 +16,7 @@ class StepLineContainer extends React.Component<any, any> {
 
     handleStepClick(order: number, isClickable: boolean): void {
         if (isClickable) {
-            this.setState({activeStep: order});
+            this.setState({ activeStep: order });
         }
     }
 
@@ -28,7 +28,11 @@ class StepLineContainer extends React.Component<any, any> {
                         name={step}
                         order={i}
                         isActive={this.state.activeStep === i}
-                        isClickable={this.props.disabled ? !this.props.disabled.includes(step) : true}
+                        isClickable={
+                            this.props.disabled
+                                ? !this.props.disabled.includes(step)
+                                : true
+                        }
                         onClick={this.handleStepClick}
                     />
                 ))}

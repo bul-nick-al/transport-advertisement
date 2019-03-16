@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import CheckBox from '../../../common/components/Checkbox' ;
+import CheckBox from '../../../common/components/Checkbox';
 import Tile from '../../../common/components/Tile';
 
 const Image = styled.img`
@@ -32,7 +32,7 @@ class TransportTileChose extends React.Component<any, any> {
                 <Desc>Вместимость: малая</Desc>
                 <CheckboxContainer>
                     <label>
-                        <CheckBox checked={false}/>
+                        <CheckBox checked={false} />
                     </label>
                 </CheckboxContainer>
             </Tile>

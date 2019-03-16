@@ -13,25 +13,27 @@ const MockedRegions = [
 ];
 
 const Menu = styled.div`
-  overflow: auto;
+    overflow: auto;
 `;
 
 const Base = styled.div`
-  display: flex;
-  height: 100%;
+    display: flex;
+    height: 100%;
 `;
 
 const MapWrapper = styled.div`
-  padding-top: 6px;
-  height: 100%;
-  flex-grow: 1;
-  order: 1;
+    padding-top: 6px;
+    height: 100%;
+    flex-grow: 1;
+    order: 1;
 `;
 
 const Segment1 = () => {
     return (
         <Base>
-            <Menu><MenuWithFilters regions={MockedRegions} /></Menu>
+            <Menu>
+                <MenuWithFilters regions={MockedRegions} />
+            </Menu>
             <YMaps>
                 <MapWrapper>
                     <Map defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
