@@ -1,10 +1,5 @@
-import { connect } from 'react-redux';
 import * as React from 'react';
 import { Tab } from './Tab';
-
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = dispatch => ({});
 
 export interface TabListPropsInterface {
     tabs: string[];
@@ -12,7 +7,7 @@ export interface TabListPropsInterface {
     onTabClick?: (index: number) => void;
 }
 
-class TabListContainer extends React.Component<any, any> {
+class TabListContainer extends React.Component<TabListPropsInterface, any> {
     constructor(props: TabListPropsInterface) {
         super(props);
         this.state = { activeTab: this.props.activeTab };
@@ -42,7 +37,4 @@ class TabListContainer extends React.Component<any, any> {
     }
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(TabListContainer);
+export default TabListContainer;
