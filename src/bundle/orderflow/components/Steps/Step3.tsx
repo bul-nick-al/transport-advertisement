@@ -27,7 +27,7 @@ const Step3 = props => {
         <Body>
             <StepBar onClickBack={() => props.sendStateEvent('back')} />
             <MainContainer>
-                <MenuWithFilters regions={data}/>
+                <MenuWithFilters regions={data} />
                 <AdPlacementTileContainer />
             </MainContainer>
         </Body>

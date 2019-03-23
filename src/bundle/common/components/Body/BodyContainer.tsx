@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import * as React from 'react';
 
 import { Step1, Step2, Step3 } from '../../../orderflow/components/Steps/';
+import { CustomSelect } from '../Select';
 
 const mapStateToProps = state => ({});
 
