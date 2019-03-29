@@ -16,6 +16,7 @@ const Name = styled.p`
 const Desc = styled.span`
     font-size: 13px;
     color: rgb(132, 140, 152);
+    padding-bottom: 5px;
 `;
 
 const CheckboxContainer = styled.div`

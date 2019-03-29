@@ -38,12 +38,6 @@ module.exports = {
                 to: 'extlib/styled-components',
             },
         ]),
-        new webpack.ProvidePlugin({
-            Promise:
-                'imports-loader?this=>global!exports-loader?global.Promise!es6-promise',
-            fetch:
-                'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch',
-        }),
     ],
     devtool: '#source-map',
     // devtool: 'none',

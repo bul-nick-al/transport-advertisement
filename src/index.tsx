@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
+import { Landing } from './bundle/landing';
 import { FooterContainer } from './bundle/common/components/Footer';
 import { HeaderContainer } from './bundle/common/components/Header';
 import { BodyContainer } from './bundle/common/components/Body';
@@ -31,7 +32,8 @@ class Main extends React.PureComponent<any, any> {
     render() {
         return (
             <div>
-                <GlobalStyle />
+                <GlobalStyle/>
+                <Landing/>
                 <Wrapper>
                     <HeaderContainer
                         openApp={this.props.openApp}
@@ -54,6 +56,6 @@ const connectedApp = connect(
     mapDispatchToProps
 )(Main);
 const reducers = 'reducer';
-connectedApp[reducers] = (state = { hi: 'beach' }, action) => state;
+connectedApp[reducers] = (state = {hi: 'beach'}, action) => state;
 
 export default connectedApp;
