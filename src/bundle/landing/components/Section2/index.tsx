@@ -7,10 +7,10 @@ import {
     DescGroup,
     DescPane,
     DescTextBody,
-    ContentBlock
+    ContentBlock,
 } from './styled';
 
-import { adv1, adv2, adv3, adv4 } from '../../assets';
+import { one, two, three, four, five } from '../../assets';
 
 export class SecondSection extends React.PureComponent {
     render() {
@@ -22,40 +22,57 @@ export class SecondSection extends React.PureComponent {
                         <DescGroup>
                             <DescPane>
                                 <div>
-                                    <img src={adv1}/>
+                                    <img src={one} alt={'Заметно сразу'} />
                                 </div>
-                                {/*<DeskTitle>Заметно сразу</DeskTitle>*/}
                                 <DescTextBody>
-                                    Делает рынок открытым, что исключает наценки медиабаинговых
-                                    агентств, что приводит к значительной экономии рекламных
-                                    бюджетов
+                                    <DeskTitle>Заметно сразу</DeskTitle>
+                                    Делает рынок открытым, что исключает наценки
+                                    медиабаинговых агентств, что приводит к
+                                    значительной экономии рекламных бюджетов
                                 </DescTextBody>
                             </DescPane>
                             <DescPane>
                                 <div>
-                                    <img src={adv2}/>
+                                    <img src={two} />
                                 </div>
                                 <DescTextBody>
-                                    Сервис экономит время, теперь нет необходимости рассылать
-                                    десятки запросов подрядчикам, все актуальные предложения
+                                    <DeskTitle>
+                                        Опыт, проверенный многими
+                                    </DeskTitle>
+                                    Сервис экономит время, теперь нет
+                                    необходимости рассылать десятки запросов
+                                    подрядчикам, все актуальные предложения
                                     расположены на сайте
                                 </DescTextBody>
                             </DescPane>
                             <DescPane>
                                 <div>
-                                    <img src={adv3}/>
+                                    <img src={three} />
                                 </div>
                                 <DescTextBody>
-                                    Сервис бесплатный и не взимает платы с рекламодателей
+                                    <DeskTitle>Эффективная реклама</DeskTitle>
+                                    Сервис бесплатный и не взимает платы с
+                                    рекламодателей
                                 </DescTextBody>
                             </DescPane>
                             <DescPane>
                                 <div>
-                                    <img src={adv4}/>
+                                    <img src={four} />
                                 </div>
                                 <DescTextBody>
-                                    Сервис учитывает все скидки, которые предусмотрены
-                                    рекламоносителями
+                                    <DeskTitle>Видят все</DeskTitle>
+                                    Сервис учитывает все скидки, которые
+                                    предусмотрены рекламоносителями
+                                </DescTextBody>
+                            </DescPane>
+                            <DescPane>
+                                <div>
+                                    <img src={five} />
+                                </div>
+                                <DescTextBody>
+                                    <DeskTitle>Легко запомнить</DeskTitle>
+                                    Сервис учитывает все скидки, которые
+                                    предусмотрены рекламоносителями
                                 </DescTextBody>
                             </DescPane>
                         </DescGroup>

@@ -32,18 +32,19 @@ export const TitleDesc = styled.div`
 `;
 
 export const DeskTitle = styled.p`
-    display: grid;
-    align-self: center;
+    //display: grid;
+    //align-self: center;
     color: #00aeef;
     font-size: ${calcResponsive(20, 25)};
+    padding: 15px 0;
 `;
 
 export const DescGroup = styled.div`
     display: grid;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
     margin-top: 20px;
     @media (min-width: 768px) {
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(3, auto);
         grid-template-rows: auto;
         align-self: center;
         text-align: center;
