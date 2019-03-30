@@ -50,6 +50,9 @@ const Button = styled.button`
     width: 270px;
     border: 0;
     margin: 0 auto;
+    &:hover{
+      cursor: pointer;
+    };
 `;
 
 export class FirstSection extends React.PureComponent<any, any> {

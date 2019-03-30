@@ -32,8 +32,6 @@ export const TitleDesc = styled.div`
 `;
 
 export const DeskTitle = styled.p`
-    //display: grid;
-    //align-self: center;
     color: #00aeef;
     font-size: ${calcResponsive(20, 25)};
     padding: 15px 0;

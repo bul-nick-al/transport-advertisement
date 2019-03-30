@@ -1,37 +1,65 @@
 import * as React from 'react';
-import { Wrapper, ContentBlock, AppButton, StyledNav } from './styled';
+import {
+    Wrapper,
+    AppButton,
+    Title,
+    Desc,
+    ImageWrapper,
+    Image2Div,
+    Image1Div,
+} from './styled';
 
-import { lift, radio, transport } from '../../assets';
+import { slide2, slide4 } from '../../assets';
+import styled, { keyframes }  from 'styled-components';
 
-export class ThirdSection extends React.PureComponent <any, any>{
-  openAPP = (e, app) => {
-    e.preventDefault();
-    this.props.openApp(app);
-  }
+const imageAnimation = keyframes`
+  100% {left: 0}
+`;
 
-  render() {
-    return (
-      <Wrapper>
-        <ContentBlock>
-          <StyledNav>
-            <AppButton href="#" onClick={(e) => this.openAPP(e, 'radio/radioapp')}>
-              <img src={radio} />
-              <div className="blueOne">реклама</div>
-              <div>на радио</div>
-            </AppButton>
-            <AppButton href="#" onClick={(e) => this.openAPP(e, 'elevators/elevators')}>
-              <img src={lift} />
-              <div className="blueOne">реклама</div>
-              <div>в лифтах</div>
-            </AppButton>
-            <AppButton href="#" onClick={(e) => this.openAPP(e, 'transport/transportadvapp')}>
-              <img src={transport} />
-              <div className="blueOne">реклама</div>
-              <div>на транспорте</div>
-            </AppButton>
-          </StyledNav>
-        </ContentBlock>
-      </Wrapper>
-    );
-  }
+const Image1 = styled.img`
+    left: -10px;
+    width: 500px;
+    box-shadow: 10px -9px 22px -10px rgba(120, 112, 120, 1);
+    position: relative;
+    -webkit-animation: ${imageAnimation} 5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: ${imageAnimation} 5s forwards;
+    animation-delay: 2s;
+`;
+
+const Image2 = styled.img`
+    width: 600px;
+    box-shadow: 10px -9px 22px -10px rgba(120, 112, 120, 1);
+    position: absolute;
+`;
+
+export class ThirdSection extends React.PureComponent<any, any> {
+    openAPP = (e, app) => {
+        e.preventDefault();
+        this.props.openApp(app);
+    };
+
+    render() {
+        return (
+            <Wrapper>
+                <Title>
+                    Mediapult в режиме реального времени рассчитывает стоимость
+                    рекламы на транспорте Хабаровска
+                </Title>
+                <Desc>
+                    Система самостоятельно выставит вам счет на оплату,
+                    предоставит все закрывающие документы, а так же загрузит
+                    фотоотчет в ваш личный кабинет в системе.
+                </Desc>
+                <ImageWrapper>
+                    <Image2Div>
+                        <Image2 src={slide4} alt={'Выбор транспорта'} />
+                    </Image2Div>
+                    <Image1Div>
+                        <Image1 src={slide2} alt={'Корзина'} />
+                    </Image1Div>
+                </ImageWrapper>
+            </Wrapper>
+        );
+    }
 }
