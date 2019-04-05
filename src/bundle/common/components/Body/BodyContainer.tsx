@@ -17,16 +17,12 @@ const processes = {
 };
 
 class BodyContainer extends React.Component<any, any> {
-    componentDidMount() {
-        this.props.initFlow({
-            flowName: 'transportFlow',
-            url: 'transport-bh',
-        });
-    }
-
     render() {
         let { flowName, stateName, isLoading, status } = this.props;
 
+        if (isLoading) {
+            return null;
+        }
         let Component;
         if (flowName && stateName) {
             Component = processes[flowName][stateName];

@@ -28,7 +28,19 @@ const Wrapper = styled.div`
 `;
 
 class Main extends React.PureComponent<any, any> {
+    constructor(props: any) {
+        super(props);
+        this.props.initFlow({
+            flowName: 'transportFlow',
+            url: 'transport-bh',
+        });
+    }
     render() {
+        let { flowName, stateName, isLoading, status } = this.props;
+
+        if (isLoading) {
+            return null;
+        }
         return (
             <div>
                 <GlobalStyle />
