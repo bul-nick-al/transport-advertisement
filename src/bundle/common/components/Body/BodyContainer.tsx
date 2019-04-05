@@ -24,7 +24,7 @@ class BodyContainer extends React.Component<any, any> {
             return null;
         }
         let Component;
-        if (flowName && stateName) {
+        if (flowName && stateName && flowName === 'transportFlow') {
             Component = processes[flowName][stateName];
         }
         return <div>{Component && <Component {...this.props} />}</div>;
