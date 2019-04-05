@@ -9,8 +9,7 @@ const Body = styled.div`
     height: 100%;
 `;
 
-const MainContainer = styled.div`
-`;
+const MainContainer = styled.div``;
 
 const MenuContainer = styled.div`
     display: inline-block;

@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "webpack-dev-server --mode development --hot",
         "build": "webpack --mode development",
-        "build:prod": "webpack --mode production --config ./webpack.conf.prod.js",
+        "build:prod": "webpack --mode production --config ./webpack.conf.prod.js \n rm -rf /Users/nicholas/WebstormProjects/mpbootstrap/node_modules/md-transport-advertisement/dist \n cp -r /Users/nicholas/WebstormProjects/transport-advertisement/dist /Users/nicholas/WebstormProjects/mpbootstrap/node_modules/md-transport-advertisement/dist",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],

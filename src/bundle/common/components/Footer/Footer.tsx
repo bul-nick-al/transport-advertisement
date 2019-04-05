@@ -19,7 +19,7 @@ const Logo = styled.img`
 `;
 
 const Base = styled.footer`
-    position: relative;
+    position: absolute;
     right: 0;
     bottom: 0;
     left: 0;

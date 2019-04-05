@@ -32,8 +32,8 @@ class Main extends React.PureComponent<any, any> {
     render() {
         return (
             <div>
-                <GlobalStyle/>
-                <Landing/>
+                <GlobalStyle />
+                {/*<Landing />*/}
                 <Wrapper>
                     <HeaderContainer
                         openApp={this.props.openApp}
@@ -56,6 +56,6 @@ const connectedApp = connect(
     mapDispatchToProps
 )(Main);
 const reducers = 'reducer';
-connectedApp[reducers] = (state = {hi: 'beach'}, action) => state;
+connectedApp[reducers] = (state = { hi: 'beach' }, action) => state;
 
 export default connectedApp;

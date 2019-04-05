@@ -2,7 +2,13 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import { FirstSection, SecondSection, ThirdSection, FourthSection, FiveSection } from './components';
+import {
+    FirstSection,
+    SecondSection,
+    ThirdSection,
+    FourthSection,
+    FiveSection,
+} from './components';
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -25,19 +31,19 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Wrapper = styled.div`
-  font-family: Segoe UI, Segoe, sans-serif;
+    font-family: Segoe UI, Segoe, sans-serif;
 `;
 
 export class Landing extends React.PureComponent {
     render() {
         return (
             <Wrapper>
-                <FirstSection {...this.props}/>
-                <SecondSection/>
-                <ThirdSection {...this.props}/>
-                <FourthSection/>
-                <FiveSection/>
-                <GlobalStyle/>
+                <FirstSection {...this.props} />
+                <SecondSection />
+                <ThirdSection {...this.props} />
+                <FourthSection />
+                <FiveSection />
+                <GlobalStyle />
             </Wrapper>
         );
     }

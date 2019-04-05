@@ -5,4 +5,11 @@ import { ThirdSection } from './Section3';
 import { FourthSection } from './Section4';
 import { FiveSection } from './Section5';
 
-export {Logo, FirstSection, SecondSection, ThirdSection, FourthSection, FiveSection}
+export {
+    Logo,
+    FirstSection,
+    SecondSection,
+    ThirdSection,
+    FourthSection,
+    FiveSection,
+};

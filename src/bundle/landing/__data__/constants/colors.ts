@@ -8,5 +8,5 @@ export const Colors = Object.freeze({
     graishListBg: '#f1f4f8',
     alternativeGraish: '#eff3f6',
     bluish: '#354052',
-    PrimeBlue: '#02abee'
+    PrimeBlue: '#02abee',
 });

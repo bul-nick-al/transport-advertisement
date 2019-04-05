@@ -10,7 +10,7 @@ import {
 } from './styled';
 
 import { slide2, slide4 } from '../../assets';
-import styled, { keyframes }  from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const imageAnimation = keyframes`
   100% {left: 0}

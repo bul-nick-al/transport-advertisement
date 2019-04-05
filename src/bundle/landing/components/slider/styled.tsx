@@ -3,11 +3,11 @@ import * as React from 'react';
 import { Colors } from '../../__data__/constants/slider';
 
 export const SliderWrapper = styled.div`
-  display: grid;
-  grid-template-rows: auto 520px 80px auto;
-  align-items: center;
-  text-align: center;
-  position: relative;
+    display: grid;
+    grid-template-rows: auto 520px 80px auto;
+    align-items: center;
+    text-align: center;
+    position: relative;
 `;
 export const SlideContainer = styled.div`
   width: 100%;
@@ -94,34 +94,34 @@ export const SlideContainer = styled.div`
   }
 `;
 export const SliderHeader = styled.div`
-  color: ${Colors.bluish};
-  font-size: 32px;
-  display: grid;
-  align-items: end;
+    color: ${Colors.bluish};
+    font-size: 32px;
+    display: grid;
+    align-items: end;
 `;
 export const SliderDescription = styled.div`
-  margin-top: 20px;
-  color: ${Colors.bluish};
-  font-size: 24px;
+    margin-top: 20px;
+    color: ${Colors.bluish};
+    font-size: 24px;
 `;
 
 export const SlideImg = styled.img``;
 
 interface DivProps {
-  active?: boolean;
+    active?: boolean;
 }
 export const Togl = styled.div`
-  display: inline-block;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
-  width: 50px;
-  cursor: pointer;
-  hr {
-    border: none;
-    height: 5px;
-    background-color: ${(props: DivProps) =>
-      props.active ? '#00aeef' : '#b2e7fa'};
-  }
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50px;
+    cursor: pointer;
+    hr {
+        border: none;
+        height: 5px;
+        background-color: ${(props: DivProps) =>
+            props.active ? '#00aeef' : '#b2e7fa'};
+    }
 `;
