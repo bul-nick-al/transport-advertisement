@@ -75,7 +75,9 @@ export class FirstSection extends React.PureComponent<any, any> {
                             транспорте вашего города в режиме онлайн.
                         </h1>
                     </HeaderLine>
-                    <Button>Попробуй сейчас</Button>
+                    <Button onClick={() => this.props.sendStateEvent('next')}>
+                        Попробуй сейчас
+                    </Button>
                 </ContentBlock>
             </BackGround>
         );

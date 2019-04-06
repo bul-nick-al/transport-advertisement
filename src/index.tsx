@@ -38,14 +38,21 @@ class Main extends React.PureComponent<any, any> {
     }
     render() {
         let { flowName, stateName, isLoading, status } = this.props;
-
+        console.warn(stateName);
         if (isLoading) {
             return null;
+        }
+        if (stateName === 'landing') {
+            return (
+                <div>
+                    <GlobalStyle />
+                    <Landing {...this.props} />
+                </div>
+            );
         }
         return (
             <div>
                 <GlobalStyle />
-                {/*<Landing />*/}
                 <Wrapper>
                     <HeaderContainer
                         openApp={this.props.openApp}
