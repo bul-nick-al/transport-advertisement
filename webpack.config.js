@@ -38,12 +38,6 @@ module.exports = {
                 to: 'extlib/styled-components',
             },
         ]),
-        new webpack.ProvidePlugin({
-            Promise:
-                'imports-loader?this=>global!exports-loader?global.Promise!es6-promise',
-            fetch:
-                'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch',
-        }),
     ],
     devtool: '#source-map',
     // devtool: 'none',
@@ -60,7 +54,7 @@ module.exports = {
                 loader: 'awesome-typescript-loader',
             },
             {
-                test: /\.(jpe?g|gif|svg|png|woff|ttf|eot|wav|mp3)$/,
+                test: /\.(jpe?g|gif|svg|png|woff|ttf|eot|wav|mp3|jpg)$/,
                 use: [
                     {
                         loader: 'file-loader',

@@ -23,6 +23,7 @@ const TableData = styled.td`
     vertical-align: center;
     padding: 15px;
     border-bottom: 1px solid #ddd;
+    text-align: left;
 `;
 
 const TableRow = styled.tr`

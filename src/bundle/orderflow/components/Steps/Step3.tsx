@@ -9,8 +9,13 @@ const Body = styled.div`
     height: 100%;
 `;
 
-const MainContainer = styled.div`
+const MainContainer = styled.div``;
+
+const MenuContainer = styled.div`
     display: inline-block;
+    width: 25%;
+    float: left;
+    position: absolute;
 `;
 
 const data = [
@@ -27,7 +32,9 @@ const Step3 = props => {
         <Body>
             <StepBar onClickBack={() => props.sendStateEvent('back')} />
             <MainContainer>
-                <MenuWithFilters regions={data} />
+                <MenuContainer>
+                    <MenuWithFilters regions={data} />
+                </MenuContainer>
                 <AdPlacementTileContainer />
             </MainContainer>
         </Body>

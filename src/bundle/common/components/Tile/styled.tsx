@@ -15,6 +15,7 @@ const StyledTile = styled.div`
     box-shadow: -5px 4px 67px -47px rgba(77, 77, 77, 0.73);
     text-align: center;
     margin: 5px 10px;
+    padding: 10px;
 `;
 
 export { StyledTile };

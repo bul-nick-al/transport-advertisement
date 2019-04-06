@@ -20,12 +20,6 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin([outputDirectory]),
-        new webpack.ProvidePlugin({
-            Promise:
-                'imports-loader?this=>global!exports-loader?global.Promise!es6-promise',
-            fetch:
-                'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch',
-        }),
         new webpackCopy([{ from: 'stub/', to: 'stub/' }]),
     ],
     // devtool: '#source-map',

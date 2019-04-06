@@ -16,7 +16,6 @@ const Crumb = styled.span<BreadCrumb>`
     display: inline-block;
     vertical-align: middle;
     color: ${props => (props.isCurrent ? '#848c98' : '#a6abb3')};
-    display: inline-block;
     margin: 5px 10px;
 `;
 
