@@ -40,7 +40,6 @@ export class FourthSection extends React.PureComponent {
         return (
             <Wrapper>
                 <ContentBlock>
-                    <StyledSlider slides={slides} />
                     <DescBlock>
                         <TitleDesc>
                             ЧТО ДАЕТ MEDIAPULT РЕКЛАМОДАТЕЛЯМ?
