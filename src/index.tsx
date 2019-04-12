@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import { Landing } from './bundle/landing';
+import { Landing } from 'bundle/landing';
 import { FooterContainer } from './bundle/common/components/Footer';
 import { HeaderContainer } from './bundle/common/components/Header';
 import { BodyContainer } from './bundle/common/components/Body';

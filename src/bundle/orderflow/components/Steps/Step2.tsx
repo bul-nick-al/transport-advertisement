@@ -29,6 +29,7 @@ class Step2 extends React.Component<any, any> {
                 <StepBar
                     onClickBack={() => this.props.sendStateEvent('back')}
                     onClickNext={() => this.props.sendStateEvent('next')}
+                    activeStep={1}
                 />
                 <TabListContainer
                     tabs={['По районам', 'По маршрутам']}

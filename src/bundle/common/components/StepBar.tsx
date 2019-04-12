@@ -6,6 +6,7 @@ import StepLineContainer from './StepLine/StepLineContainer';
 interface StepBarProps {
     onClickNext?: () => void;
     onClickBack?: () => void;
+    activeStep: number;
 }
 
 const Base = styled.div`
@@ -33,7 +34,6 @@ const ProceedButtonWrapper = styled.div`
 `;
 
 const Steps = ['Первый шаг', 'Второй шаг', 'Третий шаг'];
-const activeStep = 1;
 const StepBar = (props: StepBarProps) => {
     return (
         <Base>
@@ -45,7 +45,7 @@ const StepBar = (props: StepBarProps) => {
                     </ProceedButton>
                 </ProceedButtonWrapper>
             )}
-            <StepLineContainer steps={Steps} activeStep={activeStep} />
+            <StepLineContainer steps={Steps} activeStep={props.activeStep} />
             <SpaceBetween />
             {props.onClickNext && (
                 <ProceedButtonWrapper>
