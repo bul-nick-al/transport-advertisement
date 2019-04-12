@@ -2,7 +2,7 @@ import styled from 'styled-components';
 // 1050 максимальный размер блока с контентом
 // 360 минимальный размер блока с контентом
 export const calcResponsive = (min, max) =>
-    `calc(${min}px + (${max} - ${min}) * ((100vw - 360px) / (1050 - 360)))`;
+    `calc(${min}px + (${max} - ${min}) * ((100vw - 360px) / (3100 - 360)))`;
 
 export const StyledNav = styled.nav`
     display: grid;
@@ -13,14 +13,11 @@ export const StyledNav = styled.nav`
 `;
 
 export const ContentBlock = styled.div`
-    display: grid;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    align-items: center;
+    margin-top: calc(50vh - 50px);
+    display: flex;
     justify-content: center;
+    flex-direction: column;
     text-align: center;
-    margin-top: 25px;
     margin-left: 15px;
     margin-right: 15px;
 
@@ -31,6 +28,7 @@ export const ContentBlock = styled.div`
 
 export const HeaderLine = styled.header`
     color: white;
+    margin-bottom: 20px;
     h1 {
         font-size: ${calcResponsive(14, 32)};
         font-weight: 500;

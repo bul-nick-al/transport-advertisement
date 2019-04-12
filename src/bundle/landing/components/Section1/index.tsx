@@ -8,6 +8,7 @@ import { calcResponsive } from './styled';
 import { StyledNav, HeaderLine, ContentBlock } from './styled';
 
 const BackGround = styled.div`
+  
   height: 100vh;
   box-sizing: border-box;
   position: relative;
@@ -65,7 +66,7 @@ export class FirstSection extends React.PureComponent<any, any> {
         return (
             <BackGround>
                 <StyledNav>
-                    <Logo />
+                    <Logo/>
                     <Identification {...this.props} />
                 </StyledNav>
                 <ContentBlock>

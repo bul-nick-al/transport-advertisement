@@ -22,7 +22,6 @@ const Logo = styled.img`
     top: 19px;
     left: 30px;
 `;
-const ButtonWrapper = styled.div``;
 
 interface HeaderInterface {
     openApp: (appName: String) => void;
