@@ -30,7 +30,10 @@ const data = [
 const Step3 = props => {
     return (
         <Body>
-            <StepBar onClickBack={() => props.sendStateEvent('back')} activeStep={2}/>
+            <StepBar
+                onClickBack={() => props.sendStateEvent('back')}
+                activeStep={2}
+            />
             <MainContainer>
                 <MenuContainer>
                     <MenuWithFilters regions={data} />

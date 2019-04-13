@@ -66,7 +66,7 @@ export class FirstSection extends React.PureComponent<any, any> {
         return (
             <BackGround>
                 <StyledNav>
-                    <Logo/>
+                    <Logo />
                     <Identification {...this.props} />
                 </StyledNav>
                 <ContentBlock>
